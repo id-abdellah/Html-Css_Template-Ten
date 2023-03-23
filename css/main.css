@@ -1,0 +1,691 @@
+@font-face {
+    font-family: "centuryGothicBold";
+    font-weight: 700;
+    src: url(../Fonts/century_gothic_bold-webfont.woff2) format("woff2"),
+        url(../Fonts/century_gothic_bold-webfont.woff) format("woff");
+}
+
+/* ========================================
+    Variables
+=========================================== */
+:root {
+    --section-padding-block: 40px;
+    --secondary-color-Blue: #2253F5;
+    --secondary-color-blue-transparenc: #2253F517;
+    --color-yellow: #F7B101;
+    --section-bg: #FAFAFA;
+    --heading-fontFamily: "centuryGothicBold";
+}
+
+
+/* ========================================
+    Global Rules
+=========================================== */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+    /* background-color: #F5F5F5; */
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    padding-inline: 15px;
+    margin-inline: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+
+
+/* ========================================
+    Header
+=========================================== */
+header {
+    min-height: 100dvh;
+    position: relative;
+    background-image: url(../imgs/headerBg.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    padding-block: var(--section-padding-block);
+}
+
+header>span {
+    background-color: var(--secondary-color-Blue);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    color: white;
+    padding: 6px 0;
+    cursor: pointer;
+    transition: .3s;
+}
+
+@media (max-width: 767px) {
+    header>span {
+        font-size: 14px;
+        padding-block: 12px;
+    }
+}
+
+header>span:hover {
+    filter: brightness(95%);
+}
+
+header nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+@media (max-width: 767px) {
+    header nav {
+        background-color: white;
+        padding-block: 10px;
+        padding-right: 10px;
+    }
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    header nav .container ul {
+        position: absolute;
+        flex-direction: column;
+        background-color: white;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        /* padding-block: 20px; */
+        height: 0;
+        overflow: hidden;
+    }
+}
+
+header nav ul li {
+    padding: 6px 18px;
+}
+
+header nav ul li a {
+    font-weight: 600;
+    font-size: 17px;
+    color: black;
+    cursor: pointer;
+    transition: .3s;
+}
+
+header nav ul li a:hover {
+    color: var(--secondary-color-Blue);
+}
+
+header nav .logo-side {
+    display: flex;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+@media (max-width: 767px) {
+    header nav .logo-side {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+header nav .logo {
+    transition: .3s;
+    cursor: pointer;
+}
+
+header nav .logo:hover {
+    color: var(--secondary-color-Blue);
+}
+
+header nav .logo-side .burger {
+    cursor: pointer;
+}
+
+@media (min-width: 767px) {
+    header nav .logo-side i {
+        display: none;
+    }
+}
+
+
+/* 
+    Header Content
+*/
+
+header section {
+    margin-top: 60px;
+}
+
+header section .container .stars {
+    display: flex;
+    gap: 10px;
+}
+
+@media (max-width: 767px) {
+    header section .container .stars {
+        background-color: black;
+        position: absolute;
+        left: 0;
+        top: 102px;
+        padding: 15px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+header section .container .stars div {
+    color: var(--secondary-color-Blue);
+    font-size: 16px;
+}
+
+@media (max-width: 767px) {
+    header section .container .stars div {
+        color: white;
+    }
+}
+
+header section .container .stars span {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--secondary-color-Blue);
+}
+
+@media (max-width: 767px) {
+    header section .container .stars span {
+        color: white;
+    }
+}
+
+header section .container ul,
+header section .container h1 {
+    margin-block: 30px;
+}
+
+@media (max-width: 767px) {
+    header section .container h1 {
+        color: white;
+        font-size: 26px;
+        text-align: center;
+        margin-top: 80px;
+    }
+
+    header section .container h1 br {
+        display: none;
+    }
+
+    header section .container ul {
+        visibility: hidden;
+    }
+}
+
+header section .container ul li {
+    padding-block: 6px;
+    position: relative;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+header section .container ul li::before {
+    content: url(../imgs/oval.png);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.choosing {
+    width: 355px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (max-width: 767px) {
+    .choosing {
+        width: 250px;
+        margin-inline: auto;
+    }
+}
+
+.choosing button {
+    width: 100%;
+    height: 53px;
+    background-color: black;
+    border: none;
+    outline: none;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 767px) {
+    .choosing button {
+        background-color: white;
+        color: black;
+    }
+}
+
+.choosing button i {
+    margin-left: 5px;
+}
+
+.choosing>div {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+@media (max-width: 767px) {
+    .choosing>div {
+        font-weight: 700;
+    }
+}
+
+/* ========================================
+    Companies pics
+=========================================== */
+
+section.companies {
+    padding-block: calc(var(--section-padding-block) - 20px);
+    /* background-color: var(--section-bg); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.companies .pics {
+    text-align: center;
+}
+
+section.companies .pics img {
+    width: 100px;
+    margin-inline: 12px;
+}
+
+section.companies blockquote {
+    font-style: italic;
+    font-weight: 600;
+    font-size: 16px;
+    width: 600px;
+    text-align: center;
+    text-align-last: center;
+    margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+    section.companies blockquote {
+        width: 80%;
+    }
+}
+
+
+
+/* ========================================
+    video Part
+=========================================== */
+
+section.vid-part {
+    padding-block: var(--section-padding-block);
+}
+
+section.vid-part .container {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    gap: 10px;
+}
+
+@media (max-width: 992px) {
+    section.vid-part .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+section.vid-part .container .vid {
+    flex: 1;
+    position: relative;
+}
+
+section.vid-part .container .vid::after {
+    content: url(../imgs/vidPlay.png);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.6);
+}
+
+section.vid-part .container .vid img {
+    width: 100%;
+}
+
+
+section.vid-part .container .cntn {
+    flex: 1;
+    padding: 0px 60px;
+}
+
+@media (max-width: 992px) {
+    section.vid-part .container .cntn {
+        padding: 0;
+    }
+}
+
+
+section.vid-part .container .cntn h4 {
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+section.vid-part .container .cntn p {
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+@media (max-width: 992px) {
+    section.vid-part .container .cntn button {
+        background-color: black;
+        color: white;
+    }
+}
+
+@media (max-width: 474px) {
+    section.vid-part .container .cntn .choosing {
+        width: 100%;
+    }
+}
+
+
+/* ========================================
+    boost you immunity
+=========================================== */
+
+section.boost {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: var(--section-bg);
+    position: relative;
+}
+
+@media (max-width: 782px) {
+    section.boost {
+        grid-template-columns: 1fr;
+        background-color: white;
+    }
+}
+
+section.boost .side:nth-child(2) img {
+    width: 100%;
+}
+
+@media (max-width: 782px) {
+    section.boost .side:nth-child(2) img {
+        filter: brightness(70%);
+    }
+}
+
+section.boost .side:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    padding-inline: 100px;
+}
+
+@media (max-width: 992px) {
+    section.boost .side:nth-child(1) {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 782px) {
+    section.boost .side:nth-child(1) {
+        position: absolute;
+        width: 80%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99;
+    }
+}
+
+section.boost .side:nth-child(1) .index span {
+    margin-inline: 6px;
+}
+
+@media (max-width: 782px) {
+    section.boost .side:nth-child(1) .index {
+        display: none;
+    }
+}
+
+section.boost .side:nth-child(1) .index i {
+    cursor: pointer;
+}
+
+section.boost .side:nth-child(1) .index i:nth-of-type(1) {
+    color: #D4D4D4;
+}
+
+
+section.boost .side:nth-child(1) .prop h4 {
+    font-size: 35px;
+    margin-block: 30px;
+}
+
+@media (max-width: 782px) {
+    section.boost .side:nth-child(1) .prop h4 {
+        font-size: 28px;
+        color: white;
+        margin-block: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    section.boost .side:nth-child(1) .prop h4 {
+        font-size: 18px;
+    }
+}
+
+section.boost .side:nth-child(1) .prop p {
+    font-weight: 600;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+@media (max-width: 782px) {
+    section.boost .side:nth-child(1) .prop p {
+        color: white;
+    }
+}
+
+@media (max-width: 400px) {
+    section.boost .side:nth-child(1) .prop p {
+        font-size: 12px;
+    }
+}
+
+section.boost .side:nth-child(1) .slides {
+    display: flex;
+    gap: 4px;
+    margin-top: 30px;
+}
+
+section.boost .side:nth-child(1) .slides span {
+    width: 50px;
+    height: 3px;
+    background-color: #D4D4D4;
+    display: block;
+    border-radius: 6px;
+}
+
+@media (max-width: 782px) {
+    section.boost .side:nth-child(1) .slides {
+        margin-top: 20px;
+    }
+}
+
+section.boost .side:nth-child(1) .slides span.active {
+    background-color: var(--secondary-color-Blue);
+}
+
+
+
+/* ========================================
+    table of Properties
+=========================================== */
+
+section.table-product {
+    padding-block: var(--section-padding-block);
+}
+
+section.table-product .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+section.table-product .container h4 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+@media (max-width: 510px) {
+    section.table-product .container h4 {
+        font-size: 24px;
+    }
+}
+
+section.table-product .container>p {
+    width: 80%;
+    text-align: center;
+    margin-block: 20px 30px;
+}
+
+/* Table */
+
+section.table-product .container .tbl {
+    width: 600px;
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 767px) {
+    section.table-product .container .tbl {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    section.table-product .container .tbl table {
+        width: 650px;
+    }
+}
+
+section.table-product .container table th,
+section.table-product .container table td {
+    background-color: var(--section-bg);
+    padding: 10px;
+    text-align: center;
+}
+
+section.table-product .container table th {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+section.table-product .container table tbody tr:nth-of-type(2) td:not(:last-child) img {
+    width: 23px;
+}
+
+section.table-product .container table thead th:first-child {
+    background-color: transparent;
+}
+
+section.table-product .container table tbody .empty {
+    width: 60px;
+    position: relative;
+}
+
+section.table-product .container table td.empty img {
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+section.table-product .container table tbody tr:nth-child(2) .empty::after {
+    content: "Competitors";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    font-size: 10px;
+    font-weight: 500;
+}
+
+@media (max-width: 767px) {
+    section.table-product .container .choosing button {
+        background-color: black;
+        color: white;
+    }
+}
+
+@media (max-width: 400px) {
+    section.table-product .container .choosing {
+        width: 100%;
+    }
+}
