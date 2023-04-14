@@ -689,3 +689,59 @@ section.table-product .container table tbody tr:nth-child(2) .empty::after {
         width: 100%;
     }
 }
+
+
+/* ========================================
+    Testimonials
+=========================================== */
+
+section.testimonials {
+    padding-block: var(--section-padding-block);
+    background-color: var(--section-bg);
+}
+
+.testimonials h4 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.testimonials .slider {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* width: 900px; */
+    margin: 0 auto;
+}
+
+.testimonials .slider .card {
+    background-color: white;
+    border-radius: 6px;
+    width: 300px;
+    padding: 10px 20px 16px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.testimonials .slider .card .top {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.testimonials .slider .card .rate-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonials .slider .card .rate-name span:first-child {
+    color: var(--color-yellow);
+    font-size: 13px;
+}
+
+.testimonials .slider .card .rate-name span:last-child {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 5px;
+}
